@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.Pages.Meteo">
+    <ContentPage.Content>
+        <StackLayout
+    BackgroundColor="Orange"
+            Padding="5"
+            >
+            <Label Text="Metéo" FontSize="Large"
+                   TextColor="White"
+                HorizontalOptions="CenterAndExpand" />
+            <Editor 
+                x:Name="region"
+                Keyboard="Chat"
+                IsSpellCheckEnabled="True"
+                Completed="Getregion"
+                Placeholder="Votre region">
+            </Editor>
+            <Label
+                Text="39°"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Header"
+                >
+            </Label>
+            <Label
+                Text="Dakar, SN"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Medium"
+                >
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

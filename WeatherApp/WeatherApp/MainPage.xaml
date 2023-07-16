@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.MainPage">
+
+    <StackLayout Spacing="5"
+                 BackgroundColor="Orange"
+                 Padding="5"
+                 >
+        <Button
+            Text="Change color"
+            BackgroundColor="purple"
+            BorderWidth="2"
+            BorderColor="white"
+            CornerRadius="15"
+            TextColor="white"
+            Clicked="ChangeColor"
+            >
+        </Button>
+        <Button
+            x:Name="decrementBtn"
+            Text="- Decrement"
+            TextColor="white"
+            BackgroundColor="teal"
+            Margin="5"
+            CornerRadius="10"
+            Clicked="Decrement"
+            >
+        </Button>
+        <Button
+            x:Name="incrementBtn"
+            Text="+ Increment"
+            TextColor="white"
+            BackgroundColor="teal"
+            Margin="5"
+            CornerRadius="10"
+            Clicked="Increment"
+            >
+        </Button>
+        <Label
+            x:Name="counter"
+            Text="0"
+            HorizontalOptions="Center"
+            FontSize="50"
+            Margin="10"
+            TextColor="White"
+            >
+        </Label>
+        <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+        <StackLayout Orientation="Horizontal"
+                     IsVisible="true"
+                     HorizontalOptions="CenterAndExpand"
+                     >
+        <Button
+            HorizontalOptions="Center"
+            BackgroundColor="Orange"
+            CornerRadius="5"
+            BorderColor="teal"
+            BorderWidth="1"
+            TextColor="white"
+                FontSize="Small"
+            Text="About "
+            Clicked="NextPageAbout"
+            ></Button>
+            <Button
+            HorizontalOptions="Center"
+            BackgroundColor="Orange"
+            CornerRadius="5"
+            BorderColor="teal"
+            BorderWidth="1"
+            TextColor="white"
+                FontSize="Small"
+            Text="User "
+            Clicked="NextPageUser"
+            ></Button>
+            <Button
+                FontSize="Small"
+            HorizontalOptions="Center"
+            BackgroundColor="Orange"
+            CornerRadius="5"
+            BorderColor="teal"
+            BorderWidth="1"
+            TextColor="white"
+            Text="Meteo "
+            Clicked="NextPageMeteo"
+            ></Button>
+            <Button
+                FontSize="Small"
+            HorizontalOptions="Center"
+            BackgroundColor="Orange"
+            CornerRadius="5"
+            BorderColor="teal"
+            BorderWidth="1"
+            TextColor="white"
+            Text="Login "
+            Clicked="NextPageLogin"
+            ></Button>
+                <Button
+                FontSize="Small"
+            HorizontalOptions="Center"
+            BackgroundColor="Orange"
+            CornerRadius="5"
+            BorderColor="teal"
+            BorderWidth="1"
+            TextColor="white"
+            Text="Register "
+            Clicked="NextPageRegister"
+            ></Button>
+            </StackLayout>
+        </ScrollView>
+        <StackLayout
+            Margin="5"
+            >
+            <Entry 
+                Placeholder="Votre mot de passe"
+                Keyboard="Chat"
+                IsPassword="True"
+                x:Name="motPasse"
+                TextTransform="Lowercase"
+                />
+            <Button
+                Text="Afficher le mot de passe "
+                BackgroundColor="Transparent"
+                TextColor="White"
+                FontSize="14"
+                Clicked="ShowPassword"
+                >
+            </Button>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

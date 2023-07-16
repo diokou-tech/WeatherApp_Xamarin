@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.Pages.Register"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout>
+                <Frame BackgroundColor="Orange" Margin="5" CornerRadius="5" HasShadow="True" HeightRequest="200" HorizontalOptions="FillAndExpand">
+                </Frame>
+        <StackLayout Margin="10" Spacing="10" VerticalOptions="CenterAndExpand">
+            <Label
+                        Text="Inscription"
+                        FontSize="35"
+                        TextColor="Black"
+                        HorizontalOptions="CenterAndExpand"
+                        FontAttributes="Bold"
+                        />
+                    <BoxView />
+                    <Label Text="Username" TextColor="Black" />
+            <Entry 
+                x:Name="Username" x:DataType="Entry" />
+            <Label Text="Email" TextColor="Black"/>
+            <Entry x:Name="Email" Keyboard="Email" x:DataType="Entry" />
+            <Label Text="Telephone" TextColor="Black" />
+            <Entry x:Name="Telephone" x:DataType="Entry" Keyboard="Numeric" />
+            <Label Text="Password" TextColor="Black" />
+            <Entry x:Name="Password" IsPassword="true" x:DataType="Entry" />
+            <Label Text="Confirmation password" TextColor="Black" />
+            <Entry x:Name="PasswordConfirm"  IsPassword="true" x:DataType="Entry" />
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center" >
+                <CheckBox x:Name="choixPassword" Color="Orange" CheckedChanged="show" VerticalOptions="Center" />
+                <Label TextColor="Black" Text="Afficher le mot de passe" VerticalOptions="Center"/>
+            </StackLayout>
+            <StackLayout Margin="15" Orientation="Horizontal"
+                         HorizontalOptions="CenterAndExpand"
+                         >
+                <Button
+                Text="Enregistrer"
+                    TextColor="white"
+                    CornerRadius="5"
+                    Clicked="registerUser"
+                BackgroundColor="Orange"
+                />
+                <Button
+                Text="Annuler"
+                    TextColor="white"
+                    Clicked="cancel"
+                    CornerRadius="5"
+                BackgroundColor="IndianRed"
+                />
+            </StackLayout>
+            <StackLayout>
+               <Label  Text="Inscription avec succès ! Merci" 
+                       HorizontalOptions="Center" 
+                       TextColor="Black" 
+                       FontSize="Medium" 
+                       IsVisible="false" />
+            </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

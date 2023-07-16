@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.Pages.About">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Orange">
+            <Label Text="About"
+                   FontSize="Large"
+                HorizontalOptions="CenterAndExpand" />
+            <Editor
+                x:Name="email"
+                BackgroundColor="Transparent"
+                MaxLength="10"
+                TextTransform="Lowercase"
+                AutoSize="TextChanges"
+                TextColor="white"
+                Placeholder="Votre email"
+                PlaceholderColor="white"
+                Keyboard="Email"
+                TextChanged="TextChangedLabel"
+                Completed="TextCompletedLabel"
+                ></Editor>
+            <Editor
+                x:Name="nom"
+                BackgroundColor="Transparent"
+                MaxLength="10"
+                AutoSize="TextChanges"
+                TextColor="white"
+                Placeholder="Votre nom"
+                PlaceholderColor="white"
+                Keyboard="Chat"
+                ></Editor>
+            <Label
+                HorizontalOptions="CenterAndExpand"
+                Text="Value Email Completed : "
+                x:Name="emailCompleted"
+                ></Label>
+            <Label
+                HorizontalOptions="CenterAndExpand"
+                Text="Value Email changed : "
+                x:Name="emailChanged"
+                ></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

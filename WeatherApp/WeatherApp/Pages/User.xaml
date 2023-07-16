@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.Pages.User">
+    <ContentPage.Content>
+        <StackLayout Margin="20,20,20,20">
+            <Label Text="Nom" />
+            <Entry x:Name="Nom" x:DataType="Entry" />
+            <Label Text="Prenom" />
+            <Entry x:Name="Prenom" x:DataType="Entry" />
+            <Label Text="Age" />
+            <Entry x:Name="Age" x:DataType="Entry" Keyboard="Numeric" />
+            <Label Text="Adresse" />
+            <Entry x:Name="Adresse" x:DataType="Entry" />
+            <Label Text="Date d'adhésion" />
+            <DatePicker BackgroundColor="Transparent"  ></DatePicker>
+            <Label Text="Sexe" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label Text="Masculin" VerticalOptions="Center"/>
+                 <RadioButton x:Name="sexeM" IsChecked="true"></RadioButton>
+                <Label Text="Feminin" VerticalOptions="CenterAndExpand" />
+                <RadioButton x:Name="sexeF"></RadioButton>
+            </StackLayout>
+            <StackLayout Margin="15" Orientation="Horizontal"
+                         HorizontalOptions="CenterAndExpand"
+                         >
+                <Button
+                Text="Enregistrer"
+                    TextColor="white"
+                BackgroundColor="CadetBlue"
+                />
+                <Button
+                Text="Annuler"
+                    TextColor="white"
+                BackgroundColor="IndianRed"
+                />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

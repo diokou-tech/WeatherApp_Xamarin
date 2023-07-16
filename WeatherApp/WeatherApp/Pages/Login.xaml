@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.Pages.Login"
+             NavigationPage.HasNavigationBar="False"
+             >
+
+    <StackLayout Margin="0" Padding="0">
+        <Grid>
+            <StackLayout>
+        <Frame BackgroundColor="Orange" Margin="5" CornerRadius="5" HasShadow="True" HeightRequest="200" HorizontalOptions="FillAndExpand">
+                </Frame>
+            </StackLayout>
+            <StackLayout Margin="15,110,15,0">
+                <Frame BackgroundColor="white" CornerRadius="15" MinimumHeightRequest="400" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <StackLayout VerticalOptions="CenterAndExpand">
+                        <BoxView HeightRequest="20" ></BoxView>
+                        <Label
+                        Text="Login"
+                        FontSize="35"
+                        TextColor="Black"
+                        HorizontalOptions="CenterAndExpand"
+                        FontAttributes="Bold"
+                        />
+                        <BoxView HeightRequest="20" ></BoxView>
+                        <Entry
+                            TextColor="Black"
+                            MaxLength="100"
+                            Grid.Row="7"
+                            Grid.Column="1"
+                            HorizontalOptions="FillAndExpand"
+                            CharacterSpacing="2"
+                            Placeholder="Email" 
+                            Keyboard="Email"/>
+                        <BoxView HeightRequest="20" ></BoxView>
+                        <Entry Placeholder="Password" Keyboard="Chat" IsPassword="True"/>
+                        <BoxView HeightRequest="20" ></BoxView>
+                        <StackLayout Orientation="Horizontal" >
+                            <CheckBox Color="Orange" VerticalOptions="CenterAndExpand" x:Name="rememberMe"/>
+                            <Label Text="Se souvenir de moi" VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                        <BoxView HeightRequest="20" ></BoxView>
+                        <Button
+                            Text="Connexion"
+                            CornerRadius="18"
+                            FontSize="18"
+                            BackgroundColor="Orange"
+                            TextColor="White"
+                            CharacterSpacing="2"
+                            FontAttributes="Bold"
+                            Clicked="GoHomePage"
+                            />
+                <BoxView HeightRequest="20" />
+                    <Button
+                        TextTransform="None"
+                        Text="Mot de passe oublié !"
+                        TextColor="Orange"
+                        FontAttributes="Bold"
+                        Background="Transparent"
+                        CharacterSpacing="1"
+                        FontSize="14"
+                        />
+                    <Button
+                    Text="S'Inscrire"
+                        Clicked="registerPage"
+                        CharacterSpacing="2"
+                        TextTransform="None"
+                    FontFamily="Cambria"
+                    FontAttributes="Bold"
+                        Background="transparent"
+                        BorderWidth="0"
+                    CornerRadius="10"
+                    />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage> 
