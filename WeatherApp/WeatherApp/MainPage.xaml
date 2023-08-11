@@ -1,10 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="WeatherApp.MainPage">
+             x:Class="WeatherApp.MainPage"
+             NavigationPage.HasNavigationBar="False"
+             >
 
     <StackLayout Spacing="5"
-                 BackgroundColor="Orange"
+                 BackgroundColor="white"
                  Padding="5"
                  >
         <Button
@@ -43,33 +45,32 @@
             HorizontalOptions="Center"
             FontSize="50"
             Margin="10"
-            TextColor="White"
+            TextColor="Orange"
             >
         </Label>
         <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
         <StackLayout Orientation="Horizontal"
-                     IsVisible="true"
+                     Padding="4"
                      HorizontalOptions="CenterAndExpand"
                      >
         <Button
             HorizontalOptions="Center"
             BackgroundColor="Orange"
-            CornerRadius="5"
-            BorderColor="teal"
+            CornerRadius="10"
             BorderWidth="1"
             TextColor="white"
-                FontSize="Small"
+            FontSize="Small"
             Text="About "
             Clicked="NextPageAbout"
             ></Button>
             <Button
             HorizontalOptions="Center"
             BackgroundColor="Orange"
-            CornerRadius="5"
-            BorderColor="teal"
+            
             BorderWidth="1"
+            CornerRadius="10"
             TextColor="white"
-                FontSize="Small"
+            FontSize="Small"
             Text="User "
             Clicked="NextPageUser"
             ></Button>
@@ -77,8 +78,8 @@
                 FontSize="Small"
             HorizontalOptions="Center"
             BackgroundColor="Orange"
-            CornerRadius="5"
-            BorderColor="teal"
+            CornerRadius="10"
+            
             BorderWidth="1"
             TextColor="white"
             Text="Meteo "
@@ -88,8 +89,7 @@
                 FontSize="Small"
             HorizontalOptions="Center"
             BackgroundColor="Orange"
-            CornerRadius="5"
-            BorderColor="teal"
+            CornerRadius="10"
             BorderWidth="1"
             TextColor="white"
             Text="Login "
@@ -99,33 +99,27 @@
                 FontSize="Small"
             HorizontalOptions="Center"
             BackgroundColor="Orange"
-            CornerRadius="5"
-            BorderColor="teal"
+            CornerRadius="10"
             BorderWidth="1"
             TextColor="white"
             Text="Register "
             Clicked="NextPageRegister"
+            ></Button>                
+            <Button
+            FontSize="Small"
+            HorizontalOptions="Center"
+            BackgroundColor="Orange"
+            CornerRadius="10"
+            BorderWidth="1"
+            TextColor="white"
+            Text="Todo "
+            Clicked="NextTodoPage"
             ></Button>
             </StackLayout>
         </ScrollView>
         <StackLayout
             Margin="5"
             >
-            <Entry 
-                Placeholder="Votre mot de passe"
-                Keyboard="Chat"
-                IsPassword="True"
-                x:Name="motPasse"
-                TextTransform="Lowercase"
-                />
-            <Button
-                Text="Afficher le mot de passe "
-                BackgroundColor="Transparent"
-                TextColor="White"
-                FontSize="14"
-                Clicked="ShowPassword"
-                >
-            </Button>
         </StackLayout>
     </StackLayout>
 </ContentPage>

@@ -37,5 +37,10 @@ namespace WeatherApp.Pages
                 Password.IsPassword = !choixPassword.IsChecked;
                 PasswordConfirm.IsPassword = !choixPassword.IsChecked;
         }
+        public void home(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
+            Navigation.PushAsync(new Login());
+        }
     }
 }

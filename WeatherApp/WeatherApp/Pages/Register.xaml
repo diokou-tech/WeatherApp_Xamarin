@@ -7,9 +7,23 @@
     <ContentPage.Content>
         <Grid>
             <StackLayout>
-                <Frame BackgroundColor="Orange" Margin="5" CornerRadius="5" HasShadow="True" HeightRequest="200" HorizontalOptions="FillAndExpand">
+                <Frame
+                    BackgroundColor="Orange"
+                    Margin="2" CornerRadius="2" HasShadow="True" HeightRequest="150"
+                    >
+                    <Image
+                        IsAnimationPlaying="True"
+                        Source="img_3.jpg"
+                        HeightRequest="100"
+                        >
+                    </Image>
                 </Frame>
-        <StackLayout Margin="10" Spacing="10" VerticalOptions="CenterAndExpand">
+            </StackLayout>
+            <StackLayout Margin="15,110,15,0">
+                <Frame
+                    CornerRadius="10"
+                    >
+                <StackLayout  Spacing="5" VerticalOptions="CenterAndExpand">
             <Label
                         Text="Inscription"
                         FontSize="35"
@@ -29,22 +43,24 @@
             <Entry x:Name="Password" IsPassword="true" x:DataType="Entry" />
             <Label Text="Confirmation password" TextColor="Black" />
             <Entry x:Name="PasswordConfirm"  IsPassword="true" x:DataType="Entry" />
-            <StackLayout Orientation="Horizontal" VerticalOptions="Center" >
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" >
                 <CheckBox x:Name="choixPassword" Color="Orange" CheckedChanged="show" VerticalOptions="Center" />
                 <Label TextColor="Black" Text="Afficher le mot de passe" VerticalOptions="Center"/>
-            </StackLayout>
+                    </StackLayout>
             <StackLayout Margin="15" Orientation="Horizontal"
                          HorizontalOptions="CenterAndExpand"
                          >
                 <Button
                 Text="Enregistrer"
                     TextColor="white"
+                    TextTransform="None"
                     CornerRadius="5"
                     Clicked="registerUser"
                 BackgroundColor="Orange"
                 />
                 <Button
                 Text="Annuler"
+                    TextTransform="None"
                     TextColor="white"
                     Clicked="cancel"
                     CornerRadius="5"
@@ -59,6 +75,17 @@
                        IsVisible="false" />
             </StackLayout>
                 </StackLayout>
+                </Frame>
+                <Button
+                    Background="transparent"
+                    Text="Retour"
+                    FontSize="12"
+                    TextTransform="None"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    Padding="2"
+                    Clicked="home"
+                    />
             </StackLayout>
         </Grid>
     </ContentPage.Content>

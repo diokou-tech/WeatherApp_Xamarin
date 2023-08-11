@@ -1,22 +1,36 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace WeatherApp.Pages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Meteo : ContentPage
 	{
 		public String _defaultRegion { get; set; } = "Dakar";
 		public Meteo ()
 		{
 			InitializeComponent ();
+			//Button btn = new Button() { Text ="Cliquer" };
+			//Content = new StackLayout
+			//{
+			//	Children =
+			//	{
+			//		new ScrollView
+			//		{
+			//			VerticalOptions = LayoutOptions.FillAndExpand,
+			//			Content = new StackLayout
+			//			{
+			//				Children =	
+			//				{
+			//					btn
+			//				}
+			//			}
+			//		}
+			//	}
+			//};
 		}
 		public async void Getregion(object sender, EventArgs e)
 		{

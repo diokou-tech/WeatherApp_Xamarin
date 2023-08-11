@@ -8,12 +8,24 @@
     <StackLayout Margin="0" Padding="0">
         <Grid>
             <StackLayout>
-        <Frame BackgroundColor="Orange" Margin="5" CornerRadius="5" HasShadow="True" HeightRequest="200" HorizontalOptions="FillAndExpand">
+                <Frame BackgroundColor="Orange" Margin="5" CornerRadius="5" HasShadow="True" HeightRequest="200" HorizontalOptions="FillAndExpand">
                 </Frame>
             </StackLayout>
             <StackLayout Margin="15,110,15,0">
                 <Frame BackgroundColor="white" CornerRadius="15" MinimumHeightRequest="400" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                     <StackLayout VerticalOptions="CenterAndExpand">
+                        <Frame
+                            HorizontalOptions="CenterAndExpand"
+                            IsVisible="false"
+                            x:Name="ErrorMessage"
+                            HasShadow="False"
+                            >
+                            <Label
+                                TextColor="OrangeRed"
+                                FontSize="Medium"
+                                x:Name="TextError"
+                                ></Label>
+                        </Frame>
                         <BoxView HeightRequest="20" ></BoxView>
                         <Label
                         Text="Login"
@@ -25,17 +37,18 @@
                         <BoxView HeightRequest="20" ></BoxView>
                         <Entry
                             TextColor="Black"
+                            x:Name="email"
                             MaxLength="100"
-                            Grid.Row="7"
-                            Grid.Column="1"
-                            HorizontalOptions="FillAndExpand"
-                            CharacterSpacing="2"
                             Placeholder="Email" 
                             Keyboard="Email"/>
                         <BoxView HeightRequest="20" ></BoxView>
-                        <Entry Placeholder="Password" Keyboard="Chat" IsPassword="True"/>
+                        <Entry Placeholder="Password" x:Name="motPasse" Keyboard="Chat" IsPassword="True"/>
                         <BoxView HeightRequest="20" ></BoxView>
-                        <StackLayout Orientation="Horizontal" >
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox Color="Orange" VerticalOptions="CenterAndExpand" CheckedChanged="ShowPassword" x:Name="checkedShowPassword"/>
+                            <Label Text="Afficher le mot de passe" x:Name="checkedShowLabel" VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
                             <CheckBox Color="Orange" VerticalOptions="CenterAndExpand" x:Name="rememberMe"/>
                             <Label Text="Se souvenir de moi" VerticalOptions="CenterAndExpand"/>
                         </StackLayout>
@@ -50,8 +63,8 @@
                             FontAttributes="Bold"
                             Clicked="GoHomePage"
                             />
-                <BoxView HeightRequest="20" />
-                    <Button
+                        <BoxView HeightRequest="20" />
+                        <Button
                         TextTransform="None"
                         Text="Mot de passe oublié !"
                         TextColor="Orange"
@@ -60,16 +73,16 @@
                         CharacterSpacing="1"
                         FontSize="14"
                         />
-                    <Button
-                    Text="S'Inscrire"
+                        <Button
+                        Text="S'Inscrire"
                         Clicked="registerPage"
                         CharacterSpacing="2"
                         TextTransform="None"
-                    FontFamily="Cambria"
-                    FontAttributes="Bold"
+                        FontFamily="Cambria"
+                        FontAttributes="Bold"
                         Background="transparent"
                         BorderWidth="0"
-                    CornerRadius="10"
+                        CornerRadius="10"
                     />
                     </StackLayout>
                 </Frame>

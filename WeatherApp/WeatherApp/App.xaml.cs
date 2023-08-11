@@ -12,17 +12,14 @@ namespace WeatherApp
             Device.SetFlags(new[] {"MediaElement_Experimental", "Brush_Experimental"});
             MainPage = new NavigationPage(new Login());
         }
-
         protected override void OnStart()
         {
             Console.WriteLine("On start !");
         }
-
         protected override void OnSleep()
         {
             Console.WriteLine("On sleep !");
         }
-
         protected override void OnResume()
         {
             Console.WriteLine("On resume !");

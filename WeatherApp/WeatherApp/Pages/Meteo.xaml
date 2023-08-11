@@ -1,21 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="WeatherApp.Pages.Meteo">
+             x:Class="WeatherApp.Pages.Meteo"
+             NavigationPage.HasNavigationBar="False"
+             >
     <ContentPage.Content>
         <StackLayout
-    BackgroundColor="Orange"
-            Padding="5"
+    BackgroundColor="White"
             >
+            <Frame
+                x:Name="bar"
+                HeightRequest="50"
+                BackgroundColor="Orange"
+                >
+                <Label
+                    Text="Meteo Page"
+                    FontSize="Large"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    />
+            </Frame>
             <Label Text="Metéo" FontSize="Large"
                    TextColor="White"
                 HorizontalOptions="CenterAndExpand" />
             <Editor 
                 x:Name="region"
+                WidthRequest="250"
                 Keyboard="Chat"
                 IsSpellCheckEnabled="True"
                 Completed="Getregion"
-                Placeholder="Votre region">
+                Placeholder="Entrer une zone géographique"
+                Opacity="0.8"
+                FontFamily="arial"
+                PlaceholderColor="Black"
+                >
             </Editor>
             <Label
                 Text="39°"
@@ -29,6 +49,45 @@
                 FontSize="Medium"
                 >
             </Label>
+            <StackLayout 
+                Margin="0,25"
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                Padding="5"
+                >
+                <BoxView
+                BackgroundColor="Black"
+                HeightRequest="50"
+                WidthRequest="50"
+                Rotation="-30"
+                CornerRadius="10"
+                >
+                </BoxView>
+                <BoxView
+                BackgroundColor="DarkGray"
+                HeightRequest="50"
+                WidthRequest="50"
+                Rotation="30"
+                CornerRadius="10"
+                >
+                </BoxView>
+                <BoxView
+                BackgroundColor="Black"
+                HeightRequest="50"
+                WidthRequest="50"
+                Rotation="-30"
+                CornerRadius="10"
+                >
+                </BoxView>
+                <BoxView
+                BackgroundColor="DarkGray"
+                HeightRequest="50"
+                WidthRequest="50"
+                Rotation="30"
+                CornerRadius="10"
+                >
+                </BoxView>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

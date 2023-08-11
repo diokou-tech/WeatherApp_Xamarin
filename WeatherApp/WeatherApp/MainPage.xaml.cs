@@ -62,20 +62,9 @@ namespace WeatherApp
         {
             await Navigation.PushAsync(new Register());
         }
-        
-        public void ShowPassword(object sender, EventArgs e)
+        public async void NextTodoPage(object sender, EventArgs e)
         {
-            bool initState = motPasse.IsPassword;
-            motPasse.IsPassword = !initState;
-            Button btn = (Button)sender;
-            if (initState == true)
-            {
-                btn.Text = "Masquer le mot de passe";
-            }
-            else
-            {
-                btn.Text = "afficher le mot de passe";
-            }
+            await Navigation.PushModalAsync(new Todo());
         }
     }
 }
