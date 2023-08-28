@@ -9,6 +9,7 @@ namespace WeatherApp.Models
         public string Email { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
+        public DateTime DateNaissance { get; set; }
         public string ConfirmPassword { get; set; }
         public bool IsActive { get; set; } = true;
         public string PhoneNumber { get; set; }

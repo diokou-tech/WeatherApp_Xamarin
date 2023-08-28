@@ -1,5 +1,5 @@
 ﻿using System;
-
+using WeatherApp.Pages.Auth;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -25,7 +25,6 @@ namespace WeatherApp.Pages
             var pass = motPasse.Text;
             if (CheckLogin(user, pass))
             {
-                await Navigation.PopAsync();
                 await Navigation.PushAsync(new MainPage());
             }
         }       
@@ -45,6 +44,10 @@ namespace WeatherApp.Pages
             {
                 checkedShowLabel.Text = "Afficher le mot de passe";
             }
+        }
+        public async void PasswordReset(object sender, EventArgs e)
+        {
+          await Navigation.PushAsync(new PasswordReset());
         }
         protected bool CheckLogin(string user, string passxord)
         {

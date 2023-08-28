@@ -8,7 +8,7 @@
     <StackLayout Margin="0" Padding="0">
         <Grid>
             <StackLayout>
-                <Frame BackgroundColor="Orange" Margin="5" CornerRadius="5" HasShadow="True" HeightRequest="200" HorizontalOptions="FillAndExpand">
+                <Frame BackgroundColor="Orange" CornerRadius="0" HasShadow="True" HeightRequest="200" HorizontalOptions="FillAndExpand">
                 </Frame>
             </StackLayout>
             <StackLayout Margin="15,110,15,0">
@@ -28,8 +28,8 @@
                         </Frame>
                         <BoxView HeightRequest="20" ></BoxView>
                         <Label
-                        Text="Login"
-                        FontSize="35"
+                        Text="Connexion"
+                        FontSize="40"
                         TextColor="Black"
                         HorizontalOptions="CenterAndExpand"
                         FontAttributes="Bold"
@@ -39,24 +39,26 @@
                             TextColor="Black"
                             x:Name="email"
                             MaxLength="100"
-                            Placeholder="Email" 
+                            Text="zola"
+                            Placeholder="Email ou Telephone" 
                             Keyboard="Email"/>
                         <BoxView HeightRequest="20" ></BoxView>
-                        <Entry Placeholder="Password" x:Name="motPasse" Keyboard="Chat" IsPassword="True"/>
+                        <Entry Placeholder="Password" Text="passer" TextColor="Black" x:Name="motPasse" Keyboard="Chat" IsPassword="True"/>
                         <BoxView HeightRequest="20" ></BoxView>
                         <StackLayout Orientation="Horizontal">
                             <CheckBox Color="Orange" VerticalOptions="CenterAndExpand" CheckedChanged="ShowPassword" x:Name="checkedShowPassword"/>
-                            <Label Text="Afficher le mot de passe" x:Name="checkedShowLabel" VerticalOptions="CenterAndExpand"/>
+                            <Label Text="Afficher le mot de passe" TextColor="Black" x:Name="checkedShowLabel" VerticalOptions="CenterAndExpand"/>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal">
                             <CheckBox Color="Orange" VerticalOptions="CenterAndExpand" x:Name="rememberMe"/>
-                            <Label Text="Se souvenir de moi" VerticalOptions="CenterAndExpand"/>
+                            <Label Text="Se souvenir de moi" TextColor="Black" VerticalOptions="CenterAndExpand"/>
                         </StackLayout>
                         <BoxView HeightRequest="20" ></BoxView>
                         <Button
                             Text="Connexion"
                             CornerRadius="18"
-                            FontSize="18"
+                            FontSize="16"
+                            Padding="0"
                             BackgroundColor="Orange"
                             TextColor="White"
                             CharacterSpacing="2"
@@ -70,6 +72,7 @@
                         TextColor="Orange"
                         FontAttributes="Bold"
                         Background="Transparent"
+                        Clicked="PasswordReset"
                         CharacterSpacing="1"
                         FontSize="14"
                         />

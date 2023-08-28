@@ -2,124 +2,205 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WeatherApp.MainPage"
+             Title="Main Page"
              NavigationPage.HasNavigationBar="False"
              >
-
-    <StackLayout Spacing="5"
-                 BackgroundColor="white"
-                 Padding="5"
-                 >
-        <Button
-            Text="Change color"
-            BackgroundColor="purple"
-            BorderWidth="2"
-            BorderColor="white"
-            CornerRadius="15"
-            TextColor="white"
-            Clicked="ChangeColor"
-            >
-        </Button>
-        <Button
-            x:Name="decrementBtn"
-            Text="- Decrement"
-            TextColor="white"
-            BackgroundColor="teal"
-            Margin="5"
-            CornerRadius="10"
-            Clicked="Decrement"
-            >
-        </Button>
-        <Button
-            x:Name="incrementBtn"
-            Text="+ Increment"
-            TextColor="white"
-            BackgroundColor="teal"
-            Margin="5"
-            CornerRadius="10"
-            Clicked="Increment"
-            >
-        </Button>
-        <Label
-            x:Name="counter"
-            Text="0"
-            HorizontalOptions="Center"
-            FontSize="50"
-            Margin="10"
-            TextColor="Orange"
-            >
-        </Label>
-        <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
-        <StackLayout Orientation="Horizontal"
-                     Padding="4"
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="styleBoxView" TargetType="BoxView">
+                <Setter Property="CornerRadius" Value="30,30,0,0" ></Setter>
+                <Setter Property="Background" Value="Orange"></Setter>
+                <Setter Property="HeightRequest"  Value="1.5"></Setter>
+            </Style>
+            <Style x:Key="buttonStyleCard" TargetType="Button">
+                <Setter Property="CornerRadius" Value="10"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+                <Setter Property="TextTransform" Value="None"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="HeightRequest" Value="100"></Setter>
+                <Setter Property="BackgroundColor" Value="BlanchedAlmond"></Setter>
+            </Style>
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="HeightRequest" Value="5"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout>
+            <Frame
+                HeightRequest="400"
+                BackgroundColor="BlanchedAlmond"
+                >
+                <StackLayout
+                    Padding="5"
+                    VerticalOptions="CenterAndExpand"
+                    >
+                    <SearchBar
+                        Placeholder="Votre recherche !"
+                        x:Name="searchText"
+                        ></SearchBar>
+                    <Label
+                        Text="My App"
+                        FontSize="35"
+                        TextTransform="Uppercase"
+                        TextColor="Orange"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        FontAttributes="Bold"
+                        />
+                    <Frame
+                        Background="Transparent"
+                        HeightRequest="200"
+                        HasShadow="True"
+                        >
+                        <Image
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        IsAnimationPlaying="True"
+                        Source="img12.jpg"
+                        HeightRequest="50"
+                        >
+                        </Image>
+                    </Frame>
+                    <Label
+                        FontSize="Body"
+                        FontAttributes="Bold"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        LineBreakMode="WordWrap"
+                        LineHeight="1.5"
+                        Text="Votre portail vers la simplicité, la puissance et la commodité au bout de vos doigts." FontFamily=""
+                        />
+                    <BoxView></BoxView>
+                    <Button
+                        Text="Approuver"
+                        TextTransform="None"
+                        FontAttributes="Bold"
+                        Padding="0"
+                        Margin="0"
+                        FontSize="18"
+                        TextColor="White"
+                        Background="Orange"
+                        CornerRadius="15"
+                        ></Button>
+                </StackLayout>
+            </Frame>
+                <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <StackLayout Orientation="Horizontal"
+                     Padding="2"
                      HorizontalOptions="CenterAndExpand"
                      >
-        <Button
+                    <Button
             HorizontalOptions="Center"
             BackgroundColor="Orange"
-            CornerRadius="10"
+            CornerRadius="20"
             BorderWidth="1"
-            TextColor="white"
+            TextTransform="None"
+            HeightRequest="10"
+            TextColor="Black"
             FontSize="Small"
             Text="About "
             Clicked="NextPageAbout"
             ></Button>
-            <Button
+                    <Button
             HorizontalOptions="Center"
             BackgroundColor="Orange"
-            
+            CornerRadius="20"
             BorderWidth="1"
-            CornerRadius="10"
-            TextColor="white"
+            HeightRequest="10"
+            TextColor="Black"
+            TextTransform="None"
             FontSize="Small"
-            Text="User "
-            Clicked="NextPageUser"
+            Text="Counter "
+            Clicked="NextPageCounter"
             ></Button>
-            <Button
+                    <Button
                 FontSize="Small"
             HorizontalOptions="Center"
             BackgroundColor="Orange"
-            CornerRadius="10"
+            CornerRadius="20"
             
             BorderWidth="1"
-            TextColor="white"
+            TextColor="Black"
+            TextTransform="None"
             Text="Meteo "
             Clicked="NextPageMeteo"
             ></Button>
-            <Button
+                    <Button
                 FontSize="Small"
             HorizontalOptions="Center"
             BackgroundColor="Orange"
-            CornerRadius="10"
+            CornerRadius="20"
             BorderWidth="1"
-            TextColor="white"
+            TextTransform="None"
+            TextColor="Black"
             Text="Login "
             Clicked="NextPageLogin"
             ></Button>
-                <Button
+                    <Button
                 FontSize="Small"
             HorizontalOptions="Center"
             BackgroundColor="Orange"
-            CornerRadius="10"
+            CornerRadius="20"
             BorderWidth="1"
-            TextColor="white"
+            TextTransform="None"
+            TextColor="Black"
             Text="Register "
             Clicked="NextPageRegister"
-            ></Button>                
-            <Button
+            ></Button>
+                    <Button
             FontSize="Small"
             HorizontalOptions="Center"
             BackgroundColor="Orange"
-            CornerRadius="10"
+            CornerRadius="20"
             BorderWidth="1"
-            TextColor="white"
+            TextColor="Black"
+            TextTransform="None"
             Text="Todo "
             Clicked="NextTodoPage"
             ></Button>
-            </StackLayout>
-        </ScrollView>
-        <StackLayout
-            Margin="5"
-            >
+                </StackLayout>
+            </ScrollView>
+                <Grid
+                    Padding="2"
+                    Margin="0,2"
+                    >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                    <Button
+                        Text="Rapidité" 
+                        Grid.Row="1" Grid.Column="0"
+                       Style="{StaticResource buttonStyleCard}"
+                        ></Button>
+                    <Button
+                        Style="{StaticResource buttonStyleCard}"
+                        Text="Efficacité" Grid.Row="1" Grid.Column="1"
+                        ></Button>
+                    <Button
+                        Style="{StaticResource buttonStyleCard}"
+                        Text="Science" Grid.Row="2" Grid.Column="0"
+                        ></Button>
+                    <Button
+                        Style="{StaticResource buttonStyleCard}"
+                        Text="Pratique" Grid.Row="2" Grid.Column="1"
+                        ></Button>
+                <Button
+                        Style="{StaticResource buttonStyleCard}"
+                        Text="Science" Grid.Row="3" Grid.Column="0"
+                        ></Button>
+                <Button
+                        Style="{StaticResource buttonStyleCard}"
+                        Text="Pratique" Grid.Row="3" Grid.Column="1"
+                        ></Button>
+            </Grid>
         </StackLayout>
-    </StackLayout>
+    </ScrollView>
 </ContentPage>

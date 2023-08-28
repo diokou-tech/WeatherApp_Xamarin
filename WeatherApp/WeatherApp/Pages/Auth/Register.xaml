@@ -9,17 +9,19 @@
             <StackLayout>
                 <Frame
                     BackgroundColor="Orange"
-                    Margin="2" CornerRadius="2" HasShadow="True" HeightRequest="150"
+                    CornerRadius="2" HasShadow="True" HeightRequest="150"
                     >
-                    <Image
-                        IsAnimationPlaying="True"
-                        Source="img_3.jpg"
-                        HeightRequest="100"
-                        >
-                    </Image>
+                        <!--<Image
+                            VerticalOptions="Start"
+                            HorizontalOptions="CenterAndExpand"
+                            IsAnimationPlaying="True"
+                            Source="img13.jpg"
+                            HeightRequest="50"
+                            >
+                        </Image>-->
                 </Frame>
             </StackLayout>
-            <StackLayout Margin="15,110,15,0">
+            <StackLayout Margin="15,50,15,0">
                 <Frame
                     CornerRadius="10"
                     >
@@ -32,16 +34,19 @@
                         FontAttributes="Bold"
                         />
                     <BoxView />
-                    <Label Text="Username" TextColor="Black" />
+                    <Label Text="Pseudo (surnom)" TextColor="Black" />
             <Entry 
+                ClearButtonVisibility="WhileEditing"
                 x:Name="Username" x:DataType="Entry" />
             <Label Text="Email" TextColor="Black"/>
             <Entry x:Name="Email" Keyboard="Email" x:DataType="Entry" />
+            <Label Text="Date de Naissance" TextColor="Black" />
+            <DatePicker x:Name="DateNaissance" />
             <Label Text="Telephone" TextColor="Black" />
             <Entry x:Name="Telephone" x:DataType="Entry" Keyboard="Numeric" />
-            <Label Text="Password" TextColor="Black" />
+            <Label Text="Mot de Passe" TextColor="Black" />
             <Entry x:Name="Password" IsPassword="true" x:DataType="Entry" />
-            <Label Text="Confirmation password" TextColor="Black" />
+            <Label Text="Confirmation Mot de passe" TextColor="Black" />
             <Entry x:Name="PasswordConfirm"  IsPassword="true" x:DataType="Entry" />
                     <StackLayout Orientation="Horizontal" VerticalOptions="Center" >
                 <CheckBox x:Name="choixPassword" Color="Orange" CheckedChanged="show" VerticalOptions="Center" />
@@ -64,7 +69,7 @@
                     TextColor="white"
                     Clicked="cancel"
                     CornerRadius="5"
-                BackgroundColor="IndianRed"
+                BackgroundColor="gray"
                 />
             </StackLayout>
             <StackLayout>

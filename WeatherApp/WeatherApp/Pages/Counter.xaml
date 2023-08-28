@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.Pages.Counter"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+      <StackLayout
+          VerticalOptions="CenterAndExpand"
+          >
+            <Button
+            x:Name="decrementBtn"
+            Text="- Decrement"
+            TextColor="white"
+            BackgroundColor="{StaticResource PrimaryColor}"
+            Margin="10,0,10,0"
+            CornerRadius="10"
+            Clicked="Decrement"
+            >
+            </Button>
+            <BoxView HeightRequest="10"></BoxView>
+            <Button
+            x:Name="incrementBtn"
+            Text="+ Increment"
+            TextColor="white"
+            BackgroundColor="Orange"
+            Margin="10,0,10,0"
+            CornerRadius="10"
+            Clicked="Increment"
+            >
+            </Button>
+            <Label
+            x:Name="counter"
+            Text="0"
+            HorizontalOptions="Center"
+            FontSize="55"
+            Margin="10"
+            TextColor="Orange"
+            >
+            </Label>
+        </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
